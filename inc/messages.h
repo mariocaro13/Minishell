@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   messages.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcaro-ro <mcaro-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 19:37:34 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2025/03/08 20:29:19 by mcaro-ro         ###   ########.fr       */
+/*   Created: 2025/03/08 20:05:39 by mcaro-ro          #+#    #+#             */
+/*   Updated: 2025/03/08 20:30:08 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#ifndef MESSAGES_H
+# define MESSAGES_H
 
-int	minishell(void)
-{
-	load_history_from_file(HISTORY_FD);
-	while (true)
-	{
-		//TODO: Show prompt (readline)
-		prompt();
-		//TODO: Parsing
-		//TODO: Signals
-		//TODO: Execution
-		//TODO: BUILT-INS
-	}
-	rl_clear_history();
-	return (EXIT_SUCCESS);
-}
+# define PROMPT "M&Mshell>"
+
+// HISTORY
+# define HISTORY_FD "minishell_histoy.txt"
+// ERROR MSG
+# define ERR_O_FILE "Error opening file"
+
+#endif

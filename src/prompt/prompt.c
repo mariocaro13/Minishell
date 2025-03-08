@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   prompt.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcaro-ro <mcaro-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 19:37:34 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2025/03/08 20:29:19 by mcaro-ro         ###   ########.fr       */
+/*   Created: 2025/03/08 19:17:45 by mcaro-ro          #+#    #+#             */
+/*   Updated: 2025/03/08 20:39:00 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int	minishell(void)
+void	prompt(void)
 {
-	load_history_from_file(HISTORY_FD);
-	while (true)
+	char	*input;
+
+	input = readline(GREEN_BOLD PROMPT RESET_COLOR);
+	if (input && *input)
 	{
-		//TODO: Show prompt (readline)
-		prompt();
-		//TODO: Parsing
-		//TODO: Signals
-		//TODO: Execution
-		//TODO: BUILT-INS
+		add_history(input);
+		save_history_to_file(HISTORY_FD, input);
 	}
-	rl_clear_history();
-	return (EXIT_SUCCESS);
 }
