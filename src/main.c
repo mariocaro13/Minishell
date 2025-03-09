@@ -14,6 +14,7 @@
 
 int	main(void)
 {
+	printf("\n\n%s\n\n", WELCOME_MSG);
 	minishell();
 	return (EXIT_SUCCESS);
 }

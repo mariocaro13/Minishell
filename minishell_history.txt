@@ -1,0 +1,10 @@
+clear
+exit
+make
+./minishell
+clear
+make re
+
+make re
+
+make re
