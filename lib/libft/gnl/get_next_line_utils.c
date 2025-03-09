@@ -6,7 +6,7 @@
 /*   By: mcaro-ro <mcaro-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 12:06:55 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2025/03/08 23:27:50 by mcaro-ro         ###   ########.fr       */
+/*   Updated: 2025/03/09 01:49:46 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,12 @@ void	ft_set_content_cleaned(t_list **list_head, char *str)
 
 	last_node = ft_get_last_node(*list_head);
 	i_c = 0;
-	while (((char *)last_node->content)[i_c] != NEWLINE_CHAR && ((char *)last_node->content)[i_c])
+	while (((char *)last_node->content)[i_c] != NEWLINE_CHAR
+			&& ((char *)last_node->content)[i_c])
 		i_c++;
 	i_str = 0;
-	while (((char *)last_node->content)[i_c] && ((char *)last_node->content)[i_c + 1])
+	while (((char *)last_node->content)[i_c]
+			&& ((char *)last_node->content)[i_c + 1])
 		str[i_str++] = ((char *)last_node->content)[++i_c];
 	str[i_str] = NULL_TERMINATE;
 }
