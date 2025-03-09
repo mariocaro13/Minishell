@@ -1,3 +1,5 @@
+*.txt
+
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,c,intellij
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,c,intellij
 
@@ -136,6 +138,8 @@ fabric.properties
 
 ### Intellij Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+
+.idea/*
 
 # *.iml
 # modules.xml
