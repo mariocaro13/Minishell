@@ -6,7 +6,7 @@
 /*   By: mcaro-ro <mcaro-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 18:44:22 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2025/03/04 20:13:35 by mcaro-ro         ###   ########.fr       */
+/*   Updated: 2025/03/08 22:39:36 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,16 @@
 
 # include <stdbool.h>
 # include <stdio.h>
+# include <readline/readline.h>
+# include <readline/history.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
+# include <string.h>
+// Custom libs
+# include "libft.h"
+# include "colors.h"
+# include "messages.h"
 
 /**
 *  ____  _____ _____ ___ _   _ _____ ____  
@@ -45,6 +53,12 @@
 *
 */
 
-int	minishell(void);
+int		minishell(void);
+
+// PROMPT
+void	prompt(void);
+// HISTORY
+void	save_history_to_file(const char *filename, const char *input);
+void	load_history_from_file(const char *filename);
 
 #endif
