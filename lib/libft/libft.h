@@ -6,7 +6,7 @@
 /*   By: mcaro-ro <mcaro-ro@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 16:06:41 by mcaro-ro          #+#    #+#             */
-/*   Updated: 2025/03/08 22:49:57 by mcaro-ro         ###   ########.fr       */
+/*   Updated: 2025/03/09 01:06:39 by mcaro-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,9 @@ int		ft_isdigit(int c);
 
 //Test for any character for wich isalpha or isdigit is true.
 int		ft_isalnum(int c);
+
+//Test for any space character is true.
+int	ft_isspace(const char c);
 
 //Tests for any printing character.
 int		ft_isprint(int c);
